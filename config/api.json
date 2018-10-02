@@ -1,0 +1,18 @@
+[
+    {
+        "path": "/",
+        "method": "GET",
+        "controller": "HomeController",
+        "handler": "renderHomePage",
+        "renderer": "html"
+    },
+    {
+        "path": "/home/gitkit",
+        "method": "GET",
+        "controller": "LoginController",
+        "handler": "renderLoginPage",
+        "rendered": "html"
+    }
+]
+
+

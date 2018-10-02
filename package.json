@@ -1,0 +1,110 @@
+{
+  "name": "welcometheni",
+  "version": "1.0.0",
+  "description": "Provides glimpses of theni",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinothkaambli/mynodeapp.git"
+  },
+  "keywords": [
+    "theni"
+  ],
+  "author": "vinoth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vinothkaambli/mynodeapp/issues"
+  },
+  "homepage": "https://github.com/vinothkaambli/mynodeapp#readme",
+  "scripts": {
+    "test": "test",
+    "start": "node index.js",
+    "build": "echo 'building app' && npm run babelize",
+    "webpack": "echo '=> running webpack' && webpack --watch"
+  },
+  "jest": {
+    "verbose": true,
+    "coverageDirectory": "coverage/frontEnd",
+    "collectCoverage": true,
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/controller/",
+      "/__test__/",
+      "/test/",
+      "/lib/",
+      "/config/",
+      "/.build/"
+    ],
+    "roots": [
+      "test/unit/"
+    ],
+    "moduleNameMapper": {
+      "\\.(css|svg)$": "<rootDir>/test/__mocks__/styleMock.js"
+    },
+    "setupFiles": [
+      "<rootDir>/test/testReactAdapterSetup.js"
+    ],
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    },
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "json",
+      "es6"
+    ]
+  },
+  "dependencies": {
+    "@material-ui/core": "^1.4.3",
+    "@material-ui/icons": "^2.0.1",
+    "@material/top-app-bar": "^0.38.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-react-app": "^3.1.2",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "body-parser": "^1.18.3",
+    "caller": "^1.0.1",
+    "classnames": "^2.2.6",
+    "compression": "^1.4.3",
+    "cookie-parser": "^1.3.4",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "express-enrouten": "^1.2.0",
+    "express-session": "^1.10.4",
+    "gitkitclient": "0.0.7",
+    "googleapis": "^34.0.0",
+    "isomorphic-fetch": "^2.2.1",
+    "lodash": "^4.17.10",
+    "material-ui": "^0.20.1",
+    "meddleware": "^3.0.3",
+    "morgan": "^1.9.0",
+    "passport": "^0.4.0",
+    "passport-google-oauth": "^1.0.0",
+    "react": "16.4.0",
+    "react-dom": "16.4.0",
+    "react-faux-dom": "^4.2.0",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "4.3.1",
+    "redux": "^4.0.0",
+    "serve-static": "^1.9.2"
+  },
+  "devDependencies": {
+    "babel-jest": "^23.6.0",
+    "css-loader": "^1.0.0",
+    "enzyme": "^3.6.0",
+    "enzyme-adapter-react-16": "^1.5.0",
+    "jest": "^23.6.0",
+    "json-loader": "^0.5.7",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-middleware": "^3.1.3",
+    "webpack-dev-server": "^3.1.5"
+  }
+}

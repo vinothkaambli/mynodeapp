@@ -1,0 +1,126 @@
+{
+  "mountpath": "/home",
+  "express": {
+    "view engine": "ejs",
+    "view cache": false,
+    "views": "/public/src"
+  },
+  "gitkitServerConfig": {
+    "clientId": "1049247037404-1cb48r9a27p96sraia5sfp2s3n4o5c9m.apps.googleusercontent.com",
+    "projectId": "atomic-rune-212213",
+    "serviceAccountEmail": "",
+    "serviceAccountPrivateKeyFile": "C:/Users/vinmahendran/Documents/Branches/json/*.pem",
+    "widgetUrl": "http://localhost:8000/auth/google/callback",
+    "cookieName": "gtoken"
+  },
+  "middleware": {
+    "compress": {
+      "enabled": false,
+      "priority": 10,
+      "module": "compression"
+    },
+    "json": {
+      "enabled": true,
+      "priority": 60,
+      "module": {
+        "name": "body-parser",
+        "method": "json"
+      }
+    },
+    "urlencoded": {
+      "enabled": true,
+      "priority": 70,
+      "module": {
+        "name": "body-parser",
+        "method": "urlencoded",
+        "arguments": [
+          {
+            "extended": true
+          }
+        ]
+      }
+    },
+    "cookieParser": {
+      "enabled": true,
+      "priority": 90,
+      "module": {
+        "name": "cookie-parser",
+        "arguments": [
+          "keyboard cat"
+        ]
+      }
+    },
+    "session": {
+      "enabled": true,
+      "priority": 100,
+      "module": {
+        "name": "express-session",
+        "arguments": [
+          {
+            "key": "",
+            "secret": "keyboard cat",
+            "cookie": {
+              "path": "/",
+              "httpOnly": true,
+              "maxAge": null
+            },
+            "resave": true,
+            "saveUninitialized": true,
+            "proxy": null
+          }
+        ]
+      }
+    },
+    "router": {
+      "enabled": true,
+      "priority": 120,
+      "module": {
+        "name": "express-enrouten",
+        "arguments": [
+          {
+            "index": "/controller/index"
+          }
+        ]
+      }
+    },
+    "baseModel": {
+      "enabled": true,
+      "priority": 111,
+      "module": {
+        "name": "/lib/middleware/model"
+      }
+    },
+    "logger": {
+      "module": {
+        "name": "morgan",
+        "arguments": [
+          "tiny"
+        ]
+      }
+    },
+    "static": {
+      "enabled": true,
+      "priority": 40,
+      "module": {
+        "name": "serve-static",
+        "arguments": [
+          "/.build"
+        ]
+      }
+    },
+    "passport": {
+      "enabled": true,
+      "priority": 110,
+      "module": {
+        "name": "/lib/middleware/authentication",
+        "arguments": [
+          {
+            "CONSUMER_KEY": "1049247037404-1cb48r9a27p96sraia5sfp2s3n4o5c9m.apps.googleusercontent.com",
+            "CONSUMER_SECRET": "7sAHgIQF8byy0DnTuLqLiDVM",
+            "callbackURL": "https://172.28.128.1/home"
+          }
+        ]
+      }
+    }
+  }
+}
